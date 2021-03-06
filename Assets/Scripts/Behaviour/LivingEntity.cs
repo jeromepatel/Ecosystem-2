@@ -23,7 +23,7 @@ public class LivingEntity : MonoBehaviour {
         var meshRenderer = transform.GetComponentInChildren<MeshRenderer> ();
         for (int i = 0; i < meshRenderer.sharedMaterials.Length; i++)
         {
-            if (meshRenderer.sharedMaterials[i] == material) {
+            if (meshRenderer.sharedMaterials[i] is Material) {
                 material = meshRenderer.materials[i];
                 break;
             }
